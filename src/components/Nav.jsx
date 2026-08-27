@@ -41,6 +41,23 @@ export default function Nav({ theme, onToggleTheme }) {
             ))}
           </ul>
           <div style={{ display: 'flex', gap: '0.5rem' }}>
+            <a
+              className="theme-toggle"
+              href="/derek-watson-cv.pdf"
+              download="Derek-Watson-CV.pdf"
+              aria-label="Download CV as PDF"
+              title="Download CV (PDF)"
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path
+                  d="M8 1.5v8.3m0 0L4.7 6.8M8 9.8l3.3-3M2.5 11.8V13a1 1 0 001 1h9a1 1 0 001-1v-1.2"
+                  stroke="currentColor"
+                  strokeWidth="1.3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
             <button
               className="theme-toggle"
               type="button"
@@ -92,6 +109,11 @@ export default function Nav({ theme, onToggleTheme }) {
                 </a>
               </li>
             ))}
+            <li>
+              <a href="/derek-watson-cv.pdf" download="Derek-Watson-CV.pdf" onClick={() => setOpen(false)}>
+                Download CV (PDF)
+              </a>
+            </li>
           </ul>
         </div>
       </div>
