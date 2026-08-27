@@ -245,15 +245,27 @@ section {
   display: flex;
   flex-direction: column;
 }
-.navsheet a {
+.navsheet a,
+.navsheet .navsheet-print {
   text-decoration: none;
   color: var(--fg);
   padding: 0.6rem 0;
   font-size: 0.95rem;
   border-bottom: 1px solid var(--line);
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: left;
 }
-.navsheet li:last-child a {
+.navsheet li:last-child a,
+.navsheet li:last-child .navsheet-print {
   border-bottom: none;
 }
 @media (min-width: 900px) {
@@ -431,6 +443,9 @@ section {
   font-size: 0.55em;
   color: var(--brass);
   margin-left: 0.08em;
+}
+.stat-num-print {
+  display: none;
 }
 .stat-rule {
   display: block;
@@ -826,4 +841,101 @@ footer .wrap {
   justify-content: space-between;
   color: var(--muted);
   font-size: 0.82rem;
+}
+
+/* ============ PRINT (Download as PDF) ============ */
+@media print {
+  :root {
+    --bg: #ffffff !important;
+    --bg-alt: #f5f1e5 !important;
+    --card: #ffffff !important;
+    --fg: #16201a !important;
+    --muted: #4a5148 !important;
+    --accent: #245a4c !important;
+    --accent-ink: #ffffff !important;
+    --brass: #6d4e21 !important;
+    --line: #c7bea3 !important;
+    --spotlight: transparent !important;
+  }
+
+  /* the whole page is a scroll-reveal experience on screen; for print,
+     everything must render in its resting (fully visible) state */
+  [style] {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+
+  html,
+  body {
+    background: #fff;
+  }
+
+  .topnav,
+  .navsheet,
+  .hero-bg,
+  .hero-cta {
+    display: none !important;
+  }
+
+  /* CountUp only animates once scrolled into view; a real print can
+     happen before that, so swap in the plain final value */
+  .stat-num-live {
+    display: none !important;
+  }
+  .stat-num-print {
+    display: inline !important;
+  }
+
+  .stripe {
+    background: var(--bg-alt);
+  }
+
+  section {
+    padding: 1rem 0 !important;
+  }
+
+  .hero {
+    padding-top: 0.4in;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+  .seal {
+    width: 84px;
+    justify-self: start;
+  }
+  .seal .initials {
+    font-size: 1.6rem;
+  }
+
+  .stats-band {
+    border-color: var(--line);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .stream-card,
+  .appointment,
+  .medal,
+  .tl-item,
+  .pub-item,
+  .stat,
+  .callout {
+    break-inside: avoid;
+  }
+
+  .chips,
+  .cred-grid,
+  footer {
+    break-inside: avoid;
+  }
+
+  section:not(#top) {
+    break-before: auto;
+  }
 }

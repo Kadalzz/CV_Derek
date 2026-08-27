@@ -10,7 +10,10 @@ export default function Stats() {
           {stats.map((s) => (
             <div className="stat" key={s.label}>
               <span className="stat-num">
-                <CountUp to={s.value} duration={1.6} />
+                <CountUp className="stat-num-live" to={s.value} duration={1.6} />
+                <span className="stat-num-print" aria-hidden="true">
+                  {s.value}
+                </span>
                 {s.suffix && <span className="stat-suffix">{s.suffix}</span>}
               </span>
               <span className="stat-rule" aria-hidden="true" />
