@@ -50,7 +50,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="hero-cta" style={{ marginTop: '2.2rem' }}>
-            <DownloadCvButton className="btn btn-solid">Download this page (PDF)</DownloadCvButton>
+            <DownloadCvButton className="btn btn-solid">Download Full CV (PDF)</DownloadCvButton>
           </div>
         </AnimatedContent>
       </div>

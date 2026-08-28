@@ -42,11 +42,7 @@ export default function Nav({ theme, onToggleTheme }) {
             ))}
           </ul>
           <div style={{ display: 'flex', gap: '0.5rem' }}>
-            <DownloadCvButton
-              className="theme-toggle"
-              aria-label="Download this page as a PDF"
-              title="Download CV (PDF)"
-            >
+            <DownloadCvButton className="theme-toggle" aria-label="Download CV as PDF" title="Download CV (PDF)">
               {null}
             </DownloadCvButton>
             <button
@@ -101,7 +97,7 @@ export default function Nav({ theme, onToggleTheme }) {
               </li>
             ))}
             <li>
-              <DownloadCvButton className="navsheet-print" onClick={() => setOpen(false)} />
+              <DownloadCvButton className="navsheet-download" onClick={() => setOpen(false)} />
             </li>
           </ul>
         </div>
