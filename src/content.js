@@ -14,7 +14,7 @@ export const contactLinks = [
   {
     id: 'whatsapp',
     label: 'WhatsApp',
-    value: '+44 7881 815411',
+    value: 'Chat directly',
     href: 'https://wa.me/447881815411',
   },
 ];
