@@ -1,5 +1,7 @@
 import AnimatedContent from '../reactbits/AnimatedContent.jsx';
 import DownloadCvButton from './DownloadCvButton.jsx';
+import ContactIcon from './ContactIcon.jsx';
+import { contactLinks } from '../content.js';
 
 export default function Contact() {
   return (
@@ -12,6 +14,27 @@ export default function Contact() {
             Open to keynote invitations, external examining, and applied research partnerships in
             food safety and cultural compliance.
           </p>
+
+          <div className="contact-links">
+            {contactLinks.map((c) => (
+              <a
+                key={c.id}
+                className="contact-link"
+                href={c.href}
+                target={c.id === 'linkedin' ? '_blank' : undefined}
+                rel={c.id === 'linkedin' ? 'noopener noreferrer' : undefined}
+              >
+                <span className="icon">
+                  <ContactIcon name={c.id} />
+                </span>
+                <span className="text">
+                  <b>{c.label}</b>
+                  <span>{c.value}</span>
+                </span>
+              </a>
+            ))}
+          </div>
+
           <div className="contact-meta">
             <div>
               <b>Affiliation</b>

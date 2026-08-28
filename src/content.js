@@ -1,3 +1,24 @@
+export const contactLinks = [
+  {
+    id: 'linkedin',
+    label: 'LinkedIn',
+    value: 'linkedin.com/in/drdwatson',
+    href: 'https://www.linkedin.com/in/drdwatson/',
+  },
+  {
+    id: 'email',
+    label: 'Email',
+    value: 'derek.watson@sunderland.ac.uk',
+    href: 'mailto:derek.watson@sunderland.ac.uk',
+  },
+  {
+    id: 'whatsapp',
+    label: 'WhatsApp',
+    value: '+44 7881 815411',
+    href: 'https://wa.me/447881815411',
+  },
+];
+
 export const stats = [
   { value: 37, suffix: '', label: 'Years in Higher Education' },
   { value: 19, suffix: '', label: 'Doctoral completions as Director of Studies' },
