@@ -58,7 +58,7 @@ export default function Hero({ resolvedTheme }) {
             </div>
           </div>
           <div className="seal">
-            <span className="initials">DW</span>
+            <img className="seal-photo" src="/derek-watson.jpg" alt="Portrait of Dr Derek Watson" />
           </div>
         </div>
       </div>

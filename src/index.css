@@ -371,6 +371,7 @@ section {
   align-items: center;
   justify-content: center;
   background: var(--card);
+  overflow: hidden;
 }
 .seal::before {
   content: '';
@@ -378,11 +379,23 @@ section {
   inset: 10px;
   border-radius: 50%;
   border: 1px dashed color-mix(in srgb, var(--brass) 60%, transparent);
+  z-index: 2;
+  pointer-events: none;
 }
 .seal .initials {
   font-family: var(--font-display);
   font-size: clamp(2.4rem, 6vw, 3.4rem);
   color: var(--fg);
+}
+.seal-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: grayscale(0.15) contrast(1.03);
 }
 
 /* ============ STATS ============ */
