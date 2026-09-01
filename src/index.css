@@ -694,6 +694,64 @@ section {
   font-size: 0.88rem;
 }
 
+/* ============ GRANTS ============ */
+.grants-table {
+  border-top: 1px solid var(--line);
+}
+.grants-row {
+  display: grid;
+  grid-template-columns: 4.5rem 1fr auto;
+  gap: 1rem;
+  align-items: start;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.grants-head {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brass);
+  padding-top: 0;
+  padding-bottom: 0.7rem;
+}
+.grants-head span:last-child {
+  text-align: right;
+}
+.grants-year {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.grants-amount {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--fg);
+  text-align: right;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .grants-row {
+    grid-template-columns: 3.6rem 1fr;
+    grid-template-areas: 'year amount' 'name name';
+    row-gap: 0.3rem;
+  }
+  .grants-row .grants-year {
+    grid-area: year;
+  }
+  .grants-row .grants-amount {
+    grid-area: amount;
+  }
+  .grants-row span:nth-child(2) {
+    grid-area: name;
+  }
+  .grants-head {
+    display: none;
+  }
+}
+
 /* ============ RECOGNITION ============ */
 .seals {
   display: grid;
@@ -974,6 +1032,7 @@ footer .wrap {
   .medal,
   .tl-item,
   .pub-item,
+  .grants-row,
   .stat,
   .callout {
     break-inside: avoid;

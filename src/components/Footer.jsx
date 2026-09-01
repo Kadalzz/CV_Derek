@@ -2,8 +2,8 @@ export default function Footer() {
   return (
     <footer>
       <div className="wrap">
-        <span>&copy; 2025 Dr Derek Watson &middot; Associate Professor in Cultural Management</span>
-        <span>Curriculum vitae correct as of September 2025</span>
+        <span>&copy; 2026 Dr Derek Watson &middot; Associate Professor in Cultural Management</span>
+        <span>Curriculum vitae correct as of August 2026</span>
       </div>
     </footer>
   );

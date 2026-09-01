@@ -5,6 +5,7 @@ import Approach from './components/Approach.jsx';
 import Experience from './components/Experience.jsx';
 import GlobalReach from './components/GlobalReach.jsx';
 import Research from './components/Research.jsx';
+import Grants from './components/Grants.jsx';
 import Media from './components/Media.jsx';
 import Recognition from './components/Recognition.jsx';
 import Credentials from './components/Credentials.jsx';
@@ -25,6 +26,7 @@ export default function App() {
         <Experience />
         <GlobalReach />
         <Research />
+        <Grants />
         <Media />
         <Recognition />
         <Credentials />

@@ -45,7 +45,7 @@ export default function Research() {
           ))}
         </div>
         <p className="note">
-          Plus 70+ further journal articles, conference papers, book chapters and a monograph
+          Plus 75+ further journal articles, conference papers, book chapters and a monograph
           spanning food safety culture, third-stream engagement and cross-cultural management
           &mdash; full list available on request.
         </p>
