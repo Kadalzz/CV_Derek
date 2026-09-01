@@ -126,11 +126,33 @@ export const appointments = [
 ];
 
 export const countries = [
-  'United Kingdom', 'China', 'Panama', 'India', 'Cyprus', 'Malaysia',
-  'Nigeria', 'Botswana', 'Thailand', 'Jamaica', 'Ghana', 'Croatia',
-  'Serbia', 'Russia', 'Finland', 'Germany', 'Greece', 'Sweden',
-  'United States', 'United Arab Emirates', 'Singapore', 'Pakistan',
-  'Mauritius', 'Netherlands', 'Poland', 'Brunei', 'Canada',
+  { name: 'United Kingdom', code: 'gb' },
+  { name: 'China', code: 'cn' },
+  { name: 'Panama', code: 'pa' },
+  { name: 'India', code: 'in' },
+  { name: 'Cyprus', code: 'cy' },
+  { name: 'Malaysia', code: 'my' },
+  { name: 'Nigeria', code: 'ng' },
+  { name: 'Botswana', code: 'bw' },
+  { name: 'Thailand', code: 'th' },
+  { name: 'Jamaica', code: 'jm' },
+  { name: 'Ghana', code: 'gh' },
+  { name: 'Croatia', code: 'hr' },
+  { name: 'Serbia', code: 'rs' },
+  { name: 'Russia', code: 'ru' },
+  { name: 'Finland', code: 'fi' },
+  { name: 'Germany', code: 'de' },
+  { name: 'Greece', code: 'gr' },
+  { name: 'Sweden', code: 'se' },
+  { name: 'United States', code: 'us' },
+  { name: 'United Arab Emirates', code: 'ae' },
+  { name: 'Singapore', code: 'sg' },
+  { name: 'Pakistan', code: 'pk' },
+  { name: 'Mauritius', code: 'mu' },
+  { name: 'Netherlands', code: 'nl' },
+  { name: 'Poland', code: 'pl' },
+  { name: 'Brunei', code: 'bn' },
+  { name: 'Canada', code: 'ca' },
 ];
 
 export const publications = [

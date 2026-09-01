@@ -37,9 +37,10 @@ export default function GlobalReach() {
 
         <AnimatedContent distance={16} duration={0.8}>
           <div className="chips" aria-label="Countries engaged through keynotes, examining and consultancy">
-            {countries.map((c, i) => (
-              <span className={`chip ${i % 2 ? 'brass' : ''}`} key={c}>
-                {c}
+            {countries.map((c) => (
+              <span className="chip chip-flag" key={c.name}>
+                <img className="flag-icon" src={`https://flagcdn.com/${c.code}.svg`} alt="" loading="lazy" />
+                {c.name}
               </span>
             ))}
           </div>

@@ -635,6 +635,17 @@ section {
 .chip.brass::before {
   background: var(--brass);
 }
+.chip-flag::before {
+  content: none;
+}
+.flag-icon {
+  width: 20px;
+  height: 14px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px var(--line);
+  flex: none;
+}
 
 /* ============ RESEARCH ============ */
 .callout {
